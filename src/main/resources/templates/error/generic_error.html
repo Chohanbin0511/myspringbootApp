@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Spring Boot Thymeleaf</title>
+</head>
+<body>
+  <h2>Spring Boot MVC @ExceptionHandler Example</h2>
+  <div th:if="!${#strings.isEmpty
+  (errCode)}">
+    <h2 th:text="${errCode}">: System Errors</h2>
+  </div>
+  <div th:if="${#strings.isEmpty(errCode)}">
+    <h2> System Errors</h2>
+  </div>
+  <div th:if="!${#strings.isEmpty(errMsg)}">
+    <h2 th:text="${errMsg}"></h2>
+  </div>
+</body>
+</html>
